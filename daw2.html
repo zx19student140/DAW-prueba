@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>DAW 2</title>
+
+        <link href="estilo.css" rel="stylesheet">
+
+        <style>
+
+            .Interfaces {background-color: #D30089;}
+
+            .Entornos_c {background-color:#D32296;}
+
+            .Entornos_s {background-color:#D144A0;}
+
+            .Ingles {background-color:#CE6AAB;}
+
+            .Despliegue {background-color:#CB96B9;}
+
+            .Empresas {background-color:#8A005A;}
+
+            .default {background-color:#835E76;}
+
+        </style>
+
+    </head>
+
+    <body class="overnull">
+
+        <script src="menu.js"></script>
+        
+        <table width="1800px" height="600px" border="4px solid black" style="text-align: center; color:white;" align="center">
+
+            <tr>    <th></th>               <th>Lunes</th>                              <th>Martes</th>                             <th>Miercoles</th>                          <th>Jueves</th>                             <th>Viernes</th></tr>
+            <tr>    <td>8:00 - 9:00</td>    <td>Interfaces</td>                         <td rowspan="3">Despliegue</td>             <td rowspan="3">Entornos de Cliente</td>    <td rowspan="3">Entornos de Servidor</td>   <td>Empresas</td></tr>
+            <tr>    <td>9:00 - 10:00</td>   <td>Entornos de Cliente</td>                                                                                                                                                    <td rowspan="3">Interfaces</td></tr>
+            <tr>    <td>10:00 - 10:50</td>  <td>Inglés</td>                                                                                                                                                                 </tr>
+            <tr>    <td>11:20 - 12:10</td>  <td>Despliegue</td>                         <td rowspan="3">Entornos de Servidor</td>   <td>Empresas</td>                           <td rowspan="2">Interfaces</td>             </tr>
+            <tr>    <td>12:10 - 13:00</td>  <td rowspan="2">Entornos de Servidor</td>                                               <td rowspan="2">Entornos de Cliente</td>                                                <td>Empresas</td></tr>
+            <tr>    <td>13:00 - 14:00</td>                                                                                                                                      <td>Entornos de Servidor</td>               <td>Inglés</td></tr>
+
+        </table>
+
+        <script>
+
+            let ar = document.getElementsByTagName('td');
+
+            let aru = document.getElementsByTagName('th');
+
+            for(let c of aru) {
+                c.classList.add('default');
+            }
+
+            for (let a of ar) { 
+                b = a.firstChild.valueOf().nodeValue;
+                switch (b) {
+                    case 'Interfaces':
+                        a.classList.add('Interfaces');
+                        break;
+                    case 'Entornos de Cliente':
+                        a.classList.add('Entornos_c');
+                        break;
+                    case 'Entornos de Servidor':
+                        a.classList.add('Entornos_s');
+                        break;
+                    case 'Inglés':
+                        a.classList.add('Ingles');
+                        break;
+                    case 'Despliegue':
+                        a.classList.add('Despliegue');
+                        break;
+                    case 'Empresas':
+                        a.classList.add('Empresas');
+                        break;
+                    default:
+                        a.classList.add('default');
+                }
+            }
+
+        </script>
+
+    </body>
+
+</html>

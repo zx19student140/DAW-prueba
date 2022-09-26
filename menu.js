@@ -1,0 +1,1 @@
+document.write('<a href="#"><img width="160" height="100" src="https://www.iacs.es/wp-content/uploads/et_temp/index-47663_1080x675.jpg" /></a>\n\t<ul align="center">\n\t\t<a href="index.html"><li>Inicio</li></a>\n\t\t<a href="daw2.html"><li>DAW 2</li></a>\n\t\t<a href="qs.html"><li>Quienes Somos</li></a>\n\t\t<a href="contacto.html"><li>Contacto</li></a>\n\t</ul>');
